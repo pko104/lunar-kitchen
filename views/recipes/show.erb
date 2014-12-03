@@ -1,0 +1,16 @@
+<h1><%= @recipe[0]["name"] %></h1>
+
+<h3>Description</h3>
+<p><%= @recipe[0]["description"] %></p>
+
+<h3>Instructions</h3>
+<p><%= @recipe[0]["instructions"] %></p>
+
+<h2>Ingredients</h2>
+<ul>
+  <% @recipe.each do |ingredient| %>
+    <li><%= ingredient["ingredients"]%></li>
+  <% end %>
+</ul>
+
+<p><a href="/recipes">Back to Recipes</a></p>
